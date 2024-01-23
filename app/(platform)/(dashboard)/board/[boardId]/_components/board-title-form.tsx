@@ -6,8 +6,6 @@ import { FormInput } from "@/components/form/form-input";
 import { useAction } from "@/hooks/use-action";
 import { updateBoard } from "@/actions/update-board";
 import { toast } from "sonner";
-import { Simulate } from "react-dom/test-utils";
-import error = Simulate.error;
 
 interface BoardTitleFormProps {
   data: Board;
