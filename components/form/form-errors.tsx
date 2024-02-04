@@ -2,7 +2,7 @@ import { XCircle } from "lucide-react";
 
 interface FormErrorsProps {
   id: string;
-  errors?: Record<string, string[]>;
+  errors?: Record<string, string[] | undefined>;
 }
 
 export const FormErrors = ({ id, errors }: FormErrorsProps) => {
@@ -16,7 +16,7 @@ export const FormErrors = ({ id, errors }: FormErrorsProps) => {
       aria-live={"polite"}
       className={"mt-2 text-xs text-rose-500"}
     >
-      {errors?.[id].map((error: string) => (
+      {errors?.[id]?.map((error: string) => (
         <div
           key={error}
           className={
