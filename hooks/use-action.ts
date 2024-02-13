@@ -1,7 +1,5 @@
 import { ActionState, FieldErrors } from "@/lib/create-safe-action";
 import { useCallback, useState } from "react";
-// import { Simulate } from "react-dom/test-utils";
-// import input = Simulate.input;
 
 type Action<TInput, TOutput> = (
   data: TInput,
