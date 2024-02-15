@@ -1,9 +1,10 @@
 "use client";
 
 import { AuditLog } from "@prisma/client";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 import { generateLogMessage } from "@/lib/generate-log-message";
 import { format } from "date-fns/format";
+import { Avatar, AvatarImage } from "../components/ui/avatar";
 
 interface ActivityItemProps {
   data: AuditLog;
