@@ -4,7 +4,7 @@ import { AuditLog } from "@prisma/client";
 
 import { generateLogMessage } from "@/lib/generate-log-message";
 import { format } from "date-fns/format";
-import { Avatar, AvatarImage, AvatarFallback } from "./../components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 
 interface ActivityItemProps {
   data: AuditLog;
