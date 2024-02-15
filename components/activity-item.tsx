@@ -4,7 +4,7 @@ import { AuditLog } from "@prisma/client";
 
 import { generateLogMessage } from "@/lib/generate-log-message";
 import { format } from "date-fns/format";
-import { Avatar, AvatarImage } from "../components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface ActivityItemProps {
   data: AuditLog;
@@ -15,6 +15,7 @@ export const ActivityItem = ({ data }: ActivityItemProps) => {
     <li className={"flex items-center gap-x-2"}>
       <Avatar className={"h-8 w-8"}>
         <AvatarImage src={data.userImage} />
+        <AvatarFallback>profile picture</AvatarFallback>
       </Avatar>
       <div className={"flex flex-col space-y-0.5"}>
         <p className={"text-sm text-muted-foreground"}>
