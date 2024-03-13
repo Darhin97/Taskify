@@ -17,7 +17,7 @@ export const checkSubscription = async () => {
     select: {
       stripeSubscriptionId: true,
       stripeCustomerId: true,
-      stipePriceId: true,
+      stripePriceId: true,
       stripeCurrentPeriodEnd: true,
     },
   });
@@ -28,7 +28,7 @@ export const checkSubscription = async () => {
 
   //check subscription is not expired
   const isValid =
-    orgSubscription.stipePriceId &&
+    orgSubscription.stripePriceId &&
     orgSubscription.stripeCurrentPeriodEnd?.getTime()! + DAY_IN_MS > Date.now();
 
   //returns a boolean
